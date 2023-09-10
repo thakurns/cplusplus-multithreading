@@ -8,8 +8,8 @@ using namespace std;
 
 void work(int &count, mutex &mtx)
 {
-    for(int i = 0; i < 1E9; ++i){
-            lock_guard<mutex> guard(mtx);
+    for(int i = 0; i < 1E6; ++i){
+            unique_lock<mutex> guard(mtx);
             ++count;
         }
 }
